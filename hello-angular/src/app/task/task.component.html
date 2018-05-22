@@ -1,0 +1,61 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <h1>{{ title }}</h1>
+    <h3>{{ tag_line }}</h3>
+</div>
+<a [routerLink]="['/pets/new']">Add a pet to the shelter</a>
+<div>
+    
+</div>
+<table>
+    <thead>
+        <td>Name</td>
+        <td>Type</td>
+        <td>Actions</td>
+    </thead>
+    <tbody *ngFor='let item of pets'>
+
+        <tr>
+            <td>{{item.Name}}</td>
+            <td>{{item.type}}</td>
+            <td>
+                <button (click)='showPet(item._id)' class='details_button'>Show Details</button>
+                <button (click)='on_edit(item._id)' class='edit_button'>Edit Pet</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<!-- <app-task *ngIf='pet' [petToShow]='pet'></app-task> -->
+<!-- <h2 *ngIf='task'>Task Details: </h2>
+<ul *ngIf='task'>
+  <li>ID: {{task._id}}</li>
+  <li>Completed?: {{task.completed}}</li>
+  <li>Title: {{task.title}}</li>
+  <li>Description: {{task.description}}</li>
+  </ul> -->
+<!-- <div>
+<h3> New Pet: </h3>
+<p *ngIf='error_check'>
+  <span *ngFor='let item of error_arr'>Error: {{ item.bullshit }}</span>
+</p>
+<form (submit)='on_submit()'>
+  <p> {{new_pet | json }} </p>
+  Name: <input type='text' name='new_pet.name' [(ngModel)]='new_pet.name'><br>
+  Type: <input type='text' name='new_pet.type' [(ngModel)]='new_pet.type'><br>
+  Description: <input type='text' name='new_pet.description' [(ngModel)]='new_pet.description'><br>
+  Skill One: <input type='text' name='new_pet.skill_1' [(ngModel)]='new_pet.skill_1'><br>
+  SKill Two: <input type='text' name='new_pet.skill_2' [(ngModel)]='new_pet.skill_2'><br>
+  Skill Three: <input type='text' name='new_pet.skill_3' [(ngModel)]='new_pet.skill_3'><br>
+  <input type='submit' value='Create pet'>
+</form>
+</div>
+<div *ngIf='pet'>
+<h3> Edit Pet: </h3>
+<form (submit)='on_edit(author._id)'>
+  <p> {{ pet.name }}</p>
+  Name: <input type='text' name='edit_pet.name' [(ngModel)]='edit_pet.name' value={{pet.name}}><br>
+  <input type='submit' value='Edit pet'>
+</form>
+</div> -->
+<!-- <button [routerLink]="['/alpha']">Load Alpha</button>
+<button [routerLink]="['/beta']">Load Beta</button> -->

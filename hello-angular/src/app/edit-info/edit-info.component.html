@@ -1,0 +1,24 @@
+<div style="text-align:center">
+    <h1>{{ title }}</h1>
+    
+</div>
+<h3>{{ tag_line }}</h3>
+    <div *ngIf='error_check'>
+      <p *ngFor='let item of error_arr'>Error: {{ item.bullshit }}</p>
+    </div>
+<div>
+  <form (submit)='edit_submit(edit_pet._id)'>
+    Name: <input type='text' name='e_name' [(ngModel)]='edit_pet.Name'><br>
+    Type: <input type='text' name='e_type' [(ngModel)]='edit_pet.type'><br>
+    Description: <input type='text' name='e_details' [(ngModel)]='edit_pet.description'><br>
+    Skill One: <input type='text' name='skill_one' [(ngModel)]='edit_pet.skill_1'><br>
+    Skill Two: <input type='text' name='skill_two' [(ngModel)]='edit_pet.skill_2'><br>
+    Skill Three: <input type='text' name='skill_three' [(ngModel)]='edit_pet.skill_3'><br>
+    <button (click)='cancel_click()'>Cancel</button> &nbsp;
+    <input type='submit' value='Edit Pet'>
+  </form>
+    <nav>
+        
+        <!-- <button (click)='change_pet(edit_pet._id)'>Edit Pet</button> -->
+    </nav>
+</div>

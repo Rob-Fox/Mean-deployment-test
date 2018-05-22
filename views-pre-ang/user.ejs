@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Current User</title>
+</head>
+
+<body>
+    <h1>See a user:</h1>
+    <br>
+    <% if(user) { %>
+        <h4>Username: <%= user.user_name %></h4>
+        <h4>First name: <%= user.f_name %></h4>
+        <h4>Last name: <%= user.l_name %></h4>
+        <h4>Password: <%= user.password %></h4>
+        <h4>Birthday: <%= user.b_day %></h4>
+        <h4>Email: <%= user.email %></h4>
+    <% } %>
+</body>
+</html>

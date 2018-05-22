@@ -1,0 +1,5 @@
+tbody:nth-child(odd) {background: #CCC}
+tbody:nth-child(even) {background: #FFF}
+thead{
+    background-color: #CCC;
+}

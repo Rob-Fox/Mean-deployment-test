@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    
+    h2{
+        margin-bottom: -5px;
+        margin-left: -5px;
+    }
+    span{
+        margin-left: 5px;
+    }
+
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to the Login and Registration!</h1>
+    <form action='/registration' method='post'>
+        Username: <input type='text' name='u_name'><br>
+        First name: <input type='text' name='f_name'><br>
+        Last name: <input type='text' name='l_name'><br>
+        Birthday: <input type="date" name='b_day'><br>
+        Email: <input type='text' name='email'><br>
+        Password: <input type='text' name='password'><br>
+        Confirm Password: <input type='text' name='c_password'><br>
+        <input type='submit' value='Register'>
+    </form><br><br><br>
+    <form action='/login' method='post'>
+        Email: <input type='text' name='l_email'><br>
+        Password: <input type='text' name='l_password'><br>
+        <input type='submit' value='Login'>
+    </form>
+
+</body>
+</html>

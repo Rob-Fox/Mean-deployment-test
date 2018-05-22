@@ -1,0 +1,23 @@
+<a id='home_link' [routerLink]="['/pets']">Home</a>
+<div style="text-align:center">
+    <h1>{{ title }}</h1>
+</div>
+<h3>{{ tag_line }}{{ edit_pet.Name }}</h3>
+<div>
+    <span class='header'>Pet Type: </span><span>{{ edit_pet.type }}</span><br>
+    <span class='header'>Description: </span><span>{{ edit_pet.description }}</span><br>
+    <span class='Header'>Likes: </span><span>{{ edit_pet.likes }}</span><br>
+    <span class='header'>Skills: </span>
+    <span class='skills' *ngIf='edit_pet.skill_1 !== ""'>{{ edit_pet.skill_1 }}</span><br>
+    <span class='skills' *ngIf='edit_pet.skill_2 !== ""'>{{ edit_pet.skill_2 }}</span><br>
+    <span class='skills' *ngIf='edit_pet.skill_3 !== ""'>{{ edit_pet.skill_3 }}</span><br>
+    
+    <nav>
+        <!-- <a [routerLink]="['/pets']">Cancel</a> &nbsp; -->
+        <!-- <button (click)='cancel_click()'>Cancel</button> &nbsp; -->
+        <!-- <div *ngIf='like_button'> -->
+            <button *ngIf='like_button' (click)='like_click(edit_pet._id)'>Like</button> &nbsp;
+        <!-- </div> -->
+        <button (click)='remove_pet(edit_pet._id)'>Adopt</button>
+    </nav>
+</div>

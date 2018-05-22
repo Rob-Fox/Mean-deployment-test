@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Current Otter</title>
+</head>
+
+<body>
+    <h1>Edit an otter</h1>
+    <br>
+        <form action='/otters/<%= otter._id %>' method='post'>
+        <input type="text" name='name' placeholder="<%= otter.name %>">
+        <input type="submit" value="submit edits">
+        </form>
+</body>
+</html>
